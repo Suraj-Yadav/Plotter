@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Plotter" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Plotter" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-pg" />
+					<Add option="-g" />
+				</Compiler>
+				<Linker>
+					<Add option="-pg -lgmon" />
+					<Add library="sfml-graphics-d" />
+					<Add library="sfml-window-d" />
+					<Add library="sfml-system-d" />
+					<Add library="sfml-audio-d" />
+					<Add library="sfml-network-d" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Plotter" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add library="sfml-graphics" />
+					<Add library="sfml-window" />
+					<Add library="sfml-system" />
+					<Add library="sfml-audio" />
+					<Add library="sfml-network" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add directory="C:/ExtLibs/SFML-2.3/include" />
+		</Compiler>
+		<Linker>
+			<Add library="opengl32" />
+			<Add directory="C:/ExtLibs/SFML-2.3/lib" />
+		</Linker>
+		<Unit filename="Button.cpp" />
+		<Unit filename="Button.h" />
+		<Unit filename="Curve.cpp" />
+		<Unit filename="Curve.h" />
+		<Unit filename="Expression.cpp" />
+		<Unit filename="Expression.h" />
+		<Unit filename="FuncSig.cpp" />
+		<Unit filename="FuncSig.h" />
+		<Unit filename="PreDefFunc.cpp" />
+		<Unit filename="Term.cpp" />
+		<Unit filename="Term.h" />
+		<Unit filename="TextBox.cpp" />
+		<Unit filename="TextBox.h" />
+		<Unit filename="Token.cpp" />
+		<Unit filename="Token.h" />
+		<Unit filename="arial.ttf" />
+		<Unit filename="gridFunc.cpp" />
+		<Unit filename="gridFunc.h" />
+		<Unit filename="icon.ico" />
+		<Unit filename="main.cpp" />
+		<Unit filename="minus.png" />
+		<Unit filename="plus.png" />
+		<Unit filename="resources.rc">
+			<Option compilerVar="WINDRES" />
+		</Unit>
+		<Unit filename="temp.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="util.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+			<DoxyBlocks>
+				<comment_style block="0" line="0" />
+				<doxyfile_project />
+				<doxyfile_build />
+				<doxyfile_warnings />
+				<doxyfile_output />
+				<doxyfile_dot />
+				<general />
+			</DoxyBlocks>
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
