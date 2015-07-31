@@ -14,6 +14,7 @@
 				<Compiler>
 					<Add option="-pg" />
 					<Add option="-g" />
+					<Add directory="include" />
 				</Compiler>
 				<Linker>
 					<Add option="-pg -lgmon" />
@@ -31,6 +32,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="include" />
 				</Compiler>
 				<Linker>
 					<Add library="sfml-graphics" />
@@ -49,35 +51,37 @@
 			<Add library="opengl32" />
 			<Add directory="C:/ExtLibs/SFML-2.3/lib" />
 		</Linker>
-		<Unit filename="Button.cpp" />
-		<Unit filename="Button.h" />
-		<Unit filename="Curve.cpp" />
-		<Unit filename="Curve.h" />
-		<Unit filename="Expression.cpp" />
-		<Unit filename="Expression.h" />
-		<Unit filename="FuncSig.cpp" />
-		<Unit filename="FuncSig.h" />
-		<Unit filename="PreDefFunc.cpp" />
-		<Unit filename="Term.cpp" />
-		<Unit filename="Term.h" />
-		<Unit filename="TextBox.cpp" />
-		<Unit filename="TextBox.h" />
-		<Unit filename="Token.cpp" />
-		<Unit filename="Token.h" />
-		<Unit filename="arial.ttf" />
-		<Unit filename="gridFunc.cpp" />
-		<Unit filename="gridFunc.h" />
-		<Unit filename="icon.ico" />
-		<Unit filename="main.cpp" />
-		<Unit filename="minus.png" />
-		<Unit filename="plus.png" />
-		<Unit filename="resources.rc">
+		<Unit filename="include/Button.h" />
+		<Unit filename="include/Curve.h" />
+		<Unit filename="include/Evaluate.h" />
+		<Unit filename="include/Expression.h" />
+		<Unit filename="include/FuncSig.h" />
+		<Unit filename="include/Function.h.h" />
+		<Unit filename="include/Term.h" />
+		<Unit filename="include/TextBox.h" />
+		<Unit filename="include/Token.h" />
+		<Unit filename="include/expression-temp.h" />
+		<Unit filename="include/function.h" />
+		<Unit filename="include/gridFunc.h" />
+		<Unit filename="include/lexer21.h" />
+		<Unit filename="include/util.h" />
+		<Unit filename="resource/resources.rc">
 			<Option compilerVar="WINDRES" />
 		</Unit>
-		<Unit filename="temp.cpp">
-			<Option target="&lt;{~None~}&gt;" />
+		<Unit filename="src/Button.cpp" />
+		<Unit filename="src/Curve.cpp" />
+		<Unit filename="src/Expression.cpp" />
+		<Unit filename="src/FuncSig.cpp" />
+		<Unit filename="src/PreDefFunc.cpp" />
+		<Unit filename="src/Term.cpp" />
+		<Unit filename="src/TextBox.cpp" />
+		<Unit filename="src/Token.cpp" />
+		<Unit filename="src/gridFunc.cpp" />
+		<Unit filename="src/main.cpp" />
+		<Unit filename="src/temp.cpp">
+			<Option compile="0" />
+			<Option link="0" />
 		</Unit>
-		<Unit filename="util.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

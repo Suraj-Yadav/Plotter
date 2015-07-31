@@ -497,3 +497,110 @@
 	"Expression.h"
 	<vector>
 
+1436026878 source:g:\work\c++_progs\plotter\resource\resources.rc
+
+1437839403 source:g:\work\c++_progs\plotter\src\button.cpp
+	<iostream>
+	"Button.h"
+	<SFML/Graphics/RenderTarget.hpp>
+
+1437837898 g:\work\c++_progs\plotter\include\button.h
+	<SFML/Graphics/Sprite.hpp>
+	<SFML/Graphics/Texture.hpp>
+	<SFML/Window/Event.hpp>
+	<functional>
+
+1437560872 source:g:\work\c++_progs\plotter\src\curve.cpp
+	<SFML/Graphics/RenderTarget.hpp>
+	"Curve.h"
+	"util.h"
+
+1437552320 g:\work\c++_progs\plotter\include\curve.h
+	<SFML/Graphics/Vertex.hpp>
+	<SFML/Graphics/Drawable.hpp>
+	<SFML/Graphics/PrimitiveType.hpp>
+	"Expression.h"
+	<vector>
+
+1437549006 g:\work\c++_progs\plotter\include\expression.h
+	<vector>
+	<stack>
+	<string>
+	<algorithm>
+	"Term.h"
+	"Token.h"
+
+1437547285 g:\work\c++_progs\plotter\include\term.h
+	<string>
+	<vector>
+
+1435987977 g:\work\c++_progs\plotter\include\token.h
+	<vector>
+	<string>
+
+1437489918 g:\work\c++_progs\plotter\include\util.h
+
+1437549211 source:g:\work\c++_progs\plotter\src\expression.cpp
+	<iostream>
+	<map>
+	"Expression.h"
+	"FuncSig.h"
+
+1434467425 g:\work\c++_progs\plotter\include\funcsig.h
+	<string>
+	<vector>
+
+1435989565 source:g:\work\c++_progs\plotter\src\funcsig.cpp
+	"FuncSig.h"
+
+1437836216 source:g:\work\c++_progs\plotter\src\gridfunc.cpp
+	<SFML/Graphics/RenderWindow.hpp>
+	<SFML/Graphics/RectangleShape.hpp>
+	<SFML/Graphics/Text.hpp>
+	<SFML/Graphics/CircleShape.hpp>
+	<iostream>
+	<sstream>
+	<cmath>
+	"Expression.h"
+	"util.h"
+	<SFML/OpenGL.hpp>
+
+1438103980 source:g:\work\c++_progs\plotter\src\main.cpp
+	<SFML/Graphics.hpp>
+	<iostream>
+	<cmath>
+	"Expression.h"
+	"Button.h"
+	"TextBox.h"
+	"gridFunc.h"
+	"Curve.h"
+	<SFML/OpenGL.hpp>
+
+1436029090 g:\work\c++_progs\plotter\include\textbox.h
+	<SFML/Graphics/RectangleShape.hpp>
+	<SFML/Graphics/Shape.hpp>
+	<SFML/Graphics/Text.hpp>
+	<SFML/Window/Event.hpp>
+	<SFML/Graphics/View.hpp>
+
+1437836231 g:\work\c++_progs\plotter\include\gridfunc.h
+
+1435989576 source:g:\work\c++_progs\plotter\src\predeffunc.cpp
+	<string>
+	<vector>
+	<cmath>
+
+1437547836 source:g:\work\c++_progs\plotter\src\term.cpp
+	"Term.h"
+	<cmath>
+	<iostream>
+
+1437405592 source:g:\work\c++_progs\plotter\src\textbox.cpp
+	<iostream>
+	"TextBox.h"
+	<SFML/Graphics/RenderTarget.hpp>
+	<cctype>
+
+1435989561 source:g:\work\c++_progs\plotter\src\token.cpp
+	"Token.h"
+
