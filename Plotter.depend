@@ -565,7 +565,7 @@
 	"util.h"
 	<SFML/OpenGL.hpp>
 
-1438103980 source:g:\work\c++_progs\plotter\src\main.cpp
+1438362094 source:g:\work\c++_progs\plotter\src\main.cpp
 	<SFML/Graphics.hpp>
 	<iostream>
 	<cmath>
@@ -595,11 +595,12 @@
 	<cmath>
 	<iostream>
 
-1437405592 source:g:\work\c++_progs\plotter\src\textbox.cpp
+1438362436 source:g:\work\c++_progs\plotter\src\textbox.cpp
 	<iostream>
 	"TextBox.h"
 	<SFML/Graphics/RenderTarget.hpp>
 	<cctype>
+	"util.h"
 
 1435989561 source:g:\work\c++_progs\plotter\src\token.cpp
 	"Token.h"

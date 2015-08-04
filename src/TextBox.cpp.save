@@ -127,6 +127,7 @@ bool TextBox::handleEvent(const sf::Event &event, const sf::Vector2i &mouse) {
 	if(focused && event.type == sf::Event::TextEntered) {
 		// Handle ASCII characters only
         debf;
+        
 		if(event.text.unicode == 8) {
 			if(currIndex > 0) {
 				str.erase(currIndex - 1, 1);

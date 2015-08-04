@@ -47,6 +47,9 @@
 			<Add option="-Wall" />
 			<Add directory="C:/ExtLibs/SFML-2.3/include" />
 		</Compiler>
+		<ResourceCompiler>
+			<Add directory="other" />
+		</ResourceCompiler>
 		<Linker>
 			<Add library="opengl32" />
 			<Add directory="C:/ExtLibs/SFML-2.3/lib" />
