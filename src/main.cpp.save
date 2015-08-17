@@ -26,6 +26,8 @@ int main() {
 	int selected = -1;
 //	test[0].color = sf::Color::Blue;test[1].color = sf::Color::Blue;test[2].color = sf::Color::Blue;
 	// Create the main window
+	if(!font.loadFromFile("other\\arial.ttf"))
+		return -1;
 	std::vector<Curve> curves;
 	std::vector<TextBox> entries;
 	curves.emplace_back();
@@ -34,12 +36,14 @@ int main() {
     entries.emplace_back(200,25);
     entries[0].setColor(sf::Color::Red);
     entries[0].setPosition(20,20);
+    entries[0].setFont(font);
 	curves.emplace_back();
 	curves[1].setExpression("tan(x)");
 	curves[1].setColor(sf::Color::Blue);
 	entries.emplace_back(200,25);
     entries[1].setColor(sf::Color::Red);
     entries[1].setPosition(20,50);
+    entries[1].setFont(font);
 	sf::RenderWindow window(sf::VideoMode(800, 600), "Plotter");
 	sf::View graphView(sf::Vector2f(0, 0), sf::Vector2f(8, 6));
 	sf::View uiView = window.getDefaultView();
