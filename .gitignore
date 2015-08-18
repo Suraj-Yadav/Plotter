@@ -214,3 +214,6 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
+gmon.out
+*.layout
+Plotter.layout.save
