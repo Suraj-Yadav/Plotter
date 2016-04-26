@@ -14,8 +14,8 @@
 sf::Font font;
 sf::Text text;
 int getSelected(std::vector<Curve> &curves, sf::Vector2f pos) {
-	for(int i = 0; i < curves.size(); ++i)
-		if(curves.at(i).isOnCurve(pos))
+	for (int i = 0; i < curves.size(); ++i)
+		if (curves.at(i).isOnCurve(pos))
 			return i;
 	return -1;
 }
@@ -41,33 +41,33 @@ int main() {
 	bool draging = false;
 	sf::Vector2u origSize(window.getSize());
 	sf::Vector2f beforeCoord;
-	while(window.isOpen()) {
+	while (window.isOpen()) {
 		// Process events
 		sf::Event event;
-		while(window.pollEvent(event)) {
+		while (window.pollEvent(event)) {
 			// Close window: exit
-			if(event.type == sf::Event::Closed)
+			if (event.type == sf::Event::Closed)
 				window.close();
-			else if(event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape)
+			else if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape)
 				window.close();
-			else if(event.type == sf::Event::MouseWheelMoved) {
-				if(event.mouseWheel.delta > 0)
+			else if (event.type == sf::Event::MouseWheelMoved) {
+				if (event.mouseWheel.delta > 0)
 					zoomViewAt({ event.mouseWheel.x, event.mouseWheel.y }, window, (1.f / zoomAmount), false);
 				else
 					zoomViewAt({ event.mouseWheel.x, event.mouseWheel.y }, window, zoomAmount, false);
 				change = true;
 				graphView = window.getView();
 			}
-			else if(event.type == sf::Event::MouseButtonPressed) {
+			else if (event.type == sf::Event::MouseButtonPressed) {
 				draging = true;
 				beforeCoord = window.mapPixelToCoords(sf::Mouse::getPosition(window));
 				change = true;
 			}
-			else if(event.type == sf::Event::MouseButtonReleased) {
+			else if (event.type == sf::Event::MouseButtonReleased) {
 				draging = false;
 				change = true;
 			}
-			else if(event.type == sf::Event::Resized) {
+			else if (event.type == sf::Event::Resized) {
 //				std::cout << "Resized\n";
 				sf::Vector2u newSize(window.getSize());
 				// update the view to the new size of the window
@@ -85,7 +85,7 @@ int main() {
 		graphView = window.getView();
 		sf::Vector2f mousePos = window.mapPixelToCoords(sf::Mouse::getPosition(window));
 		// Draw the string
-		if(draging) {
+		if (draging) {
 			sf::Vector2f newCoord(window.mapPixelToCoords(sf::Mouse::getPosition(window)));
 			sf::Vector2f offset = beforeCoord - newCoord;
 			graphView = window.getView();
@@ -96,17 +96,17 @@ int main() {
 		//Draw the Graph and Things
 		drawGrid(window, change);
 
-		if(change) {
-            for(Curve &c:curves){
+		if (change) {
+			for (Curve &c : curves) {
 				c.plotYvsXAdap(graphView);
-            }
+			}
 			change = draging;
 		}
 
 		glEnable(GL_LINE_SMOOTH);
 		glLineWidth(4.0f);
-		for(Curve &c:curves)
-				window.draw(c);
+		for (Curve &c : curves)
+			window.draw(c);
 		glDisable(GL_LINE_SMOOTH);
 		glLineWidth(1.0f);
 

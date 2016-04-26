@@ -216,4 +216,4 @@ pip-log.txt
 .mr.developer.cfg
 gmon.out
 *.layout
-Plotter.layout.save
+*.layout.save

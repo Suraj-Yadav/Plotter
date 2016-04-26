@@ -261,6 +261,6 @@ void drawGrid(sf::RenderWindow &window, bool change) {
 		gridLine(view, xSep, ySep, sf::Color(0, 0, 0, 100), Line);
 	}
 	window.draw(&Line[0], Line.size(), sf::Lines);
-	gridLable(window, xSep, ySep, sf::Color::Black);
+	//gridLable(window, xSep, ySep, sf::Color::Black);
 	xyAxis(window);
 }
