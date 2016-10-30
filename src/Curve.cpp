@@ -1,6 +1,7 @@
 #include <SFML/Graphics/RenderTarget.hpp>
-#include "Curve.h"
-#include "util.h"
+#include "../include/util.h"
+#include "../include/Curve.h"
+
 extern float xSep;
 extern float ySep;
 Curve::Curve() {
@@ -85,20 +86,19 @@ size_t Curve::plotYvsXAdap(sf::View view) {
 bool Curve::isOnCurve(sf::Vector2f pos) {
 	if(m_curve.size() == 0)
 		return false;
-	int lo = 0;
-	int hi = m_curve.size() / 2 - 1;
+	unsigned long lo = 0;
+	unsigned long hi = m_curve.size() / 2 - 1;
 //	val(lo);
 //	val(hi);
 	while(lo <= hi) {
-		int mid = lo + (hi - lo) / 2;
-		if(pos.x < m_curve.at(2 * mid).position.x && pos.x < m_curve.at(2 * mid + 1).position.x) hi = mid - 1;
+//		int mid = lo + (hi - lo) / 2;
+		unsigned long mid = lo + hi >> 1;
+		if(pos.x < m_curve.at(mid << 1).position.x && pos.x < m_curve.at(2 * mid + 1).position.x) hi = mid - 1;
 		else if(pos.x > m_curve.at(2 * mid).position.x && pos.x > m_curve.at(2 * mid + 1).position.x) lo = mid + 1;
 		else {
-			float dist = (xSep * xSep + ySep * ySep) * 0.001;
-			if(distFromLine(m_curve.at(2 * mid).position, m_curve.at(2 * mid + 1).position, pos) < dist) {
-				return true;
-			}
-			return false;
+			double dist = (xSep * xSep + ySep * ySep) * 0.001;
+
+			return distFromLine(m_curve.at(2 * mid).position, m_curve.at(2 * mid + 1).position, pos) < dist;
 		}
 	}
 	return false;
